@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Innstube | Alpine Gastlichkeit</title>
+  <title>Innstube | Das legendäre Studentenversteck</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
@@ -176,6 +176,30 @@
       margin-top: 0.3rem;
     }
 
+    /* Über uns spezial */
+    #ueberuns {
+      background-color: #fff9f9;
+      padding: 2rem;
+      border-radius: 10px;
+      border-left: 5px solid #e84a5f;
+    }
+    #ueberuns del {
+      color: #999;
+    }
+    #ueberuns ins {
+      text-decoration: none;
+      font-weight: bold;
+      color: #e84a5f;
+    }
+    #ueberuns ul {
+      margin: 1rem 0;
+      list-style-type: none;
+    }
+    #ueberuns li {
+      padding: 0.3rem 0;
+      border-bottom: none;
+    }
+
     /* Footer */
     footer {
       background-color: var(--primary);
@@ -258,7 +282,7 @@
 <body>
   <header>
     <h1>Innstube</h1>
-    <p>Alpine Gastlichkeit auf höchstem Niveau</p>
+    <p>Offiziell illegal • Inoffiziell legendär</p>
   </header>
 
   <nav>
@@ -276,59 +300,62 @@
         <div class="menu-item">
           <div>
             <div class="menu-item-name">Montag & Dienstag</div>
+            <div class="description">(Theoretisch Ruhetag, praktisch kommt Maxi trotzdem rein wenn er Bock hat)</div>
           </div>
-          <div class="menu-item-price">Ruhetag</div>
+          <div class="menu-item-price">Geschlossen*</div>
         </div>
         <div class="menu-item">
           <div>
             <div class="menu-item-name">Mittwoch – Freitag</div>
           </div>
-          <div class="menu-item-price">16:00 – 23:00 Uhr</div>
+          <div class="menu-item-price">Ab 16 Uhr bis die Nachbarn meckern</div>
         </div>
         <div class="menu-item">
           <div>
             <div class="menu-item-name">Samstag & Sonntag</div>
+            <div class="description">Frühschoppen mit Katerfrühstück</div>
           </div>
-          <div class="menu-item-price">11:00 – 23:00 Uhr</div>
+          <div class="menu-item-price">Ab 11 Uhr</div>
         </div>
       </div>
+      <p style="font-style: italic; margin-top: 1rem;">*Außer jemand bringt Schnaps mit</p>
     </section>
 
     <section id="speisekarte" tabindex="0">
       <h2>Speisekarte</h2>
       <div class="menu-category">
-        <h3>Hausgemachte Klassiker</h3>
+        <h3>Hausgemachte "Delikatessen"</h3>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Tiroler Gröstl mit Trüffel</div>
-            <div class="description">Traditionell mit Rindfleisch, Kartoffeln und Zwiebeln, verfeinert mit schwarzem Trüffel</div>
+            <div class="menu-item-name">Toast Hawaii</div>
+            <div class="description">Mit 3 Tage altem Ananasrest vom Asialaden</div>
           </div>
-          <div class="menu-item-price">€24,90</div>
+          <div class="menu-item-price">€3,50</div>
         </div>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Kaiserschmarrn mit Goldblattschaum</div>
-            <div class="description">Fluffiger Schmarren mit hausgemachtem Apfelmus und Blattgold</div>
+            <div class="menu-item-name">Ramen instant</div>
+            <div class="description">Aus der Packung, aber wir tun so als wär's hausgemacht</div>
           </div>
-          <div class="menu-item-price">€19,50</div>
+          <div class="menu-item-price">€5,90</div>
         </div>
       </div>
       
       <div class="menu-category">
-        <h3>Premium Fleischgerichte</h3>
+        <h3>Premium Müll</h3>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Wagyu Beef Tafelspitz</div>
-            <div class="description">Japanisches Wagyu Rind mit Krencreme und Röstkartoffeln</div>
+            <div class="menu-item-name">Dönerteller vom Vortag</div>
+            <div class="description">Mit extra Darmbakterien-Kick</div>
           </div>
-          <div class="menu-item-price">€89,90</div>
+          <div class="menu-item-price">€7,90</div>
         </div>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Wildragout vom Hirsch</div>
-            <div class="description">Mit Waldpilzen, Preiselbeeren und hausgemachten Spätzle</div>
+            <div class="menu-item-name">Pommes Mayo</div>
+            <div class="description">Mayo vielleicht abgelaufen, Risiko inklusive</div>
           </div>
-          <div class="menu-item-price">€65,50</div>
+          <div class="menu-item-price">€4,50</div>
         </div>
       </div>
     </section>
@@ -336,88 +363,110 @@
     <section id="bierkarte" tabindex="0">
       <h2>Bierkarte</h2>
       <div class="menu-category">
-        <h3>Hausbrauereien</h3>
+        <h3>Standard</h3>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Innstube Hell – 0,5l</div>
-            <div class="description">Unser klassisches Helles nach alter Brauart</div>
+            <div class="menu-item-name">Billigst-Bier – 0,5l</div>
+            <div class="description">Kalt oder lauwarm, je nachdem ob der Kühlschrank funktioniert</div>
           </div>
-          <div class="menu-item-price">€8,40</div>
+          <div class="menu-item-price">€1,50</div>
         </div>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Alpen-Dunkel – 0,5l</div>
-            <div class="description">Kraftvolles Dunkelbier mit Malzaromen</div>
+            <div class="menu-item-name">Oettinger Export – 0,5l</div>
+            <div class="description">Für Studenten und Menschen ohne Geschmacksnerven</div>
           </div>
-          <div class="menu-item-price">€8,60</div>
+          <div class="menu-item-price">€1,80</div>
         </div>
       </div>
       
       <div class="menu-category">
-        <h3>Premium & Rare Biere</h3>
+        <h3>Premium (wenn Mutti zahlt)</h3>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Black Truffle Stout – 0,5l</div>
-            <div class="description">Exklusives Imperial Stout mit schwarzem Trüffel, gereift in Whiskyfässern</div>
+            <div class="menu-item-name">Augustiner – 0,5l</div>
+            <div class="description">Nur wenn Maxi gute Laune hat</div>
           </div>
-          <div class="menu-item-price" class="premium">€65,00</div>
+          <div class="menu-item-price">€3,50</div>
         </div>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Gold Barley Wine – 0,33l</div>
-            <div class="description">Limitierter Jahrgangsbarley mit 15% Alkohol, 5 Jahre gereift</div>
+            <div class="menu-item-name">Whisky-Cola</div>
+            <div class="description">3% Whisky, 97% Billig-Cola</div>
           </div>
-          <div class="menu-item-price premium">€85,00</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="menu-item-name">Platinum Hopfenrarität – 0,5l</div>
-            <div class="description">Weltweit limitiert auf 500 Flaschen, gehopft mit seltenen Neuseeland-Hopfen</div>
-          </div>
-          <div class="menu-item-price premium">€120,00</div>
+          <div class="menu-item-price">€4,00</div>
         </div>
       </div>
     </section>
 
     <section id="uebernachtung" tabindex="0">
       <h2>Übernachtungsmöglichkeiten</h2>
-      <p>Unsere exklusiven Suiten verbinden alpine Tradition mit modernstem Luxus:</p>
+      <p>Unsere "Luxus"-Unterkünfte:</p>
       
       <div class="menu-category">
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Alpenblick Suite</div>
-            <div class="description">40qm mit Balkon und Panoramablick, Königszimmer mit Kamin</div>
+            <div class="menu-item-name">Couch mit Flecken</div>
+            <div class="description">Mit gratis Katzenhaaren und mysteriösem Geruch</div>
           </div>
-          <div class="menu-item-price">ab €290/Nacht</div>
+          <div class="menu-item-price">€0,00*</div>
         </div>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Whisky & Wein Suite</div>
-            <div class="description">Privater Whirlpool, Minibar mit Premium-Spirituosen inklusive</div>
+            <div class="menu-item-name">Balkon (nur im Sommer)</div>
+            <div class="description">Mit Stechmücken inklusive</div>
           </div>
-          <div class="menu-item-price">ab €450/Nacht</div>
+          <div class="menu-item-price">€0,00*</div>
         </div>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Penthouse Alpenrose</div>
-            <div class="description">120qm Dachsuite mit privater Sauna, Butler-Service und Frühstück im Bett</div>
+            <div class="menu-item-name">Badewanne</div>
+            <div class="description">Nur für Hartgesottene (Handtuch nicht inklusive)</div>
           </div>
-          <div class="menu-item-price premium">ab €890/Nacht</div>
+          <div class="menu-item-price">€0,00*</div>
         </div>
       </div>
+      <p style="font-style: italic; margin-top: 1rem;">*Preis steigt proportional zur Anzahl der konsumierten Getränke</p>
     </section>
 
     <section id="ueberuns" tabindex="0">
       <h2>Über uns</h2>
       <p>
-        Die Innstube steht seit 1892 für höchste alpine Gastlichkeit. Was als bescheidenes Gasthaus begann, hat sich zu einem der exklusivsten Gastronomie- und Übernachtungsbetriebe Tirols entwickelt.
+        Die <del>Bruchbude</del> <ins>Innstube</ins> ist das reinste Wohnzimmer-Projekt von unserem geizigen aber liebenswerten Wirt Maxi. Was als normale Studentenbude begann, hat sich zu einem <strong>illegalen</strong> <ins>ganz legalen</ins> Spontan-Wirtshaus entwickelt, wo regelmäßig die Polizei <del>wegen Ruhestörung</del> zum gemütlichen Schnapserl vorbeischaut.
       </p>
+      
       <p>
-        Unser Haus verbindet die Tradition der Alpen mit modernstem Komfort und kulinarischer Exzellenz. Jedes Gericht, jedes Getränk und jedes Detail unserer Suiten ist mit größter Sorgfalt ausgewählt und zubereitet.
+        Unsere Atmosphäre ist eine Mischung aus:
       </p>
+      <ul style="list-style-type: '🍺 '; padding-left: 1.5rem;">
+        <li>50% alte, durchgesoffene Couch</li>
+        <li>30% abgeranzte Barhocker mit Wackelbein</li>
+        <li>15% Küchentisch mit eingebrannten Vodka-Flecken</li>
+        <li>5% mysteriöse klebrige Flecken (wir fragen nicht nach)</li>
+      </ul>
+
       <p>
-        Unser hauseigenes Brauhaus produziert limitierte Bierspezialitäten, die weltweit ihresgleichen suchen. Die Innstube ist mehr als ein Restaurant - sie ist ein Erlebnis für alle Sinne.
+        <strong>Unser Wirt in drei Akten:</strong><br>
+        1. "Kommts herein, Leute! Alles kein Problem!"<br>
+        2. "SCHEIßE! Wer hat schon wieder das letzte Bier genommen?!"<br>
+        3. *schläft betrunken in der Ecke* "Ihr seids die besten... echt jetzt..."
+      </p>
+
+      <p>
+        Besondere Dienstleistungen:
+      </p>
+      <ul style="list-style-type: '🤬 '; padding-left: 1.5rem;">
+        <li><strong>Kostenlose Beleidigungen</strong> ab 23 Uhr oder nach dem 5. Bier</li>
+        <li><strong>Hausgemachte Schärfe</strong>: Unsere Chili con Carne führt garantiert zu Darmbeschwerden</li>
+        <li><strong>Übernachtungsmöglichkeit</strong> (aka "du pennst hier ein und putzt morgen")</li>
+      </ul>
+
+      <p>
+        Trotz allem: Die Innstube hat Charme wie ein dreiäugiger Straßenköter - irgendwie eklig, aber man kann nicht anders als ihn lieb zu haben. Maxi würde uns zwar gerade wieder anschreien weil wir das hier schreiben, aber morgen früh steht er wieder mit Kater und selbstgemachtem Frühstück vor der Tür.
+      </p>
+
+      <p style="font-style: italic; margin-top: 2rem;">
+        P.S.: Die Polizei war nie hier. Falls doch, waren wir das nicht. Und die kaputte Toilette war schon immer so.
       </p>
     </section>
   </main>
@@ -434,24 +483,23 @@
         </ul>
       </div>
       <div class="footer-column">
-        <h3>Links</h3>
+        <h3>Wichtige Infos</h3>
         <ul>
-          <li><a href="#oeffnungszeiten">Öffnungszeiten</a></li>
-          <li><a href="#speisekarte">Speisekarte</a></li>
-          <li><a href="#bierkarte">Bierkarte</a></li>
-          <li><a href="#uebernachtung">Übernachtung</a></li>
+          <li>Hausordnung: Keine Regeln außer Maxis Laune</li>
+          <li>Küchenschlüssel: Unter der Fußmatte</li>
+          <li>Notfallnummer: Pizza-Service</li>
         </ul>
       </div>
       <div class="footer-column">
-        <h3>Reservierungen</h3>
+        <h3>Disclaimer</h3>
         <ul>
-          <li>Restaurant: mind. 48h im Voraus</li>
-          <li>Suites: mind. 4 Wochen im Voraus</li>
-          <li>Bierverkostungen: nach Vereinbarung</li>
+          <li>Wir übernehmen keine Haftung</li>
+          <li>Für nichts. Gar nichts.</li>
+          <li>Besucht uns auf eigene Gefahr</li>
         </ul>
       </div>
       <div class="copyright">
-        &copy; 2025 Innstube | Alle Preise in Euro inkl. MwSt. | <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
+        &copy; 2025 Innstube | Alle Angaben frei erfunden | <a href="#">Impressum</a> (gibts nicht) | <a href="#">Datenschutz</a> (lol)
       </div>
     </div>
   </footer>
