@@ -4,12 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Innstube | Das legendäre Studentenversteck</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=EB+Garamond:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #2a363b;
@@ -19,7 +16,7 @@
       --dark: #1a1a1a;
       --gold: #d4af37;
     }
-
+    
     /* Reset & Basis */
     * {
       box-sizing: border-box;
@@ -27,7 +24,7 @@
       padding: 0;
     }
     body {
-      font-family: "Montserrat", sans-serif;
+      font-family: 'Montserrat', sans-serif;
       background-color: var(--light);
       color: var(--dark);
       line-height: 1.7;
@@ -45,46 +42,40 @@
 
     /* Header */
     header {
-      background: linear-gradient(
-          rgba(0, 0, 0, 0.75),
-          rgba(0, 0, 0, 0.75)
-        ),
-        url("https://images.unsplash.com/photo-1607158571376-78914d442cd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80")
-          center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                  url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80') center/cover no-repeat;
       color: white;
       padding: 8rem 1rem 6rem;
       text-align: center;
       position: relative;
     }
     header::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -1px;
       left: 0;
       width: 100%;
       height: 100px;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
       z-index: 1;
     }
     header h1 {
-      font-family: "EB Garamond", serif;
+      font-family: 'EB Garamond', serif;
       font-weight: 600;
       font-size: 4.5rem;
       margin: 0;
       letter-spacing: 2px;
       position: relative;
       z-index: 2;
-      text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
     }
     header p {
-      font-family: "EB Garamond", serif;
+      font-family: 'EB Garamond', serif;
       font-size: 1.5rem;
       font-style: italic;
       margin-top: 1rem;
       opacity: 0.9;
       position: relative;
       z-index: 2;
-      text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
     }
 
     /* Navigation */
@@ -97,7 +88,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     }
     nav a {
       font-weight: 500;
@@ -125,7 +116,7 @@
       position: relative;
     }
     h2 {
-      font-family: "EB Garamond", serif;
+      font-family: 'EB Garamond', serif;
       font-weight: 600;
       font-size: 2.5rem;
       color: var(--primary);
@@ -134,7 +125,7 @@
       display: inline-block;
     }
     h2::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -10px;
       left: 0;
@@ -148,13 +139,13 @@
       margin-bottom: 1.5rem;
       line-height: 1.8;
     }
-
+    
     /* Menu items */
     .menu-category {
       margin-bottom: 3rem;
     }
     .menu-category h3 {
-      font-family: "EB Garamond", serif;
+      font-family: 'EB Garamond', serif;
       font-size: 1.5rem;
       color: var(--primary);
       margin: 2rem 0 1rem;
@@ -225,7 +216,7 @@
       text-align: left;
     }
     .footer-column h3 {
-      font-family: "EB Garamond", serif;
+      font-family: 'EB Garamond', serif;
       font-size: 1.3rem;
       margin-bottom: 1.5rem;
       color: var(--gold);
@@ -245,39 +236,63 @@
     .copyright {
       margin-top: 3rem;
       padding-top: 1.5rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(255,255,255,0.1);
       grid-column: 1 / -1;
       text-align: center;
       font-size: 0.9rem;
       color: #aaa;
     }
 
+    /* Kontaktformular */
+    .footer-contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .footer-contact label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--gold);
+    }
+    .footer-contact input,
+    .footer-contact textarea {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    .footer-contact input:focus,
+    .footer-contact textarea:focus {
+      outline: 2px solid var(--secondary);
+      background-color: #fff;
+      color: var(--dark);
+    }
+    .footer-contact button {
+      background-color: var(--secondary);
+      border: none;
+      padding: 0.7rem;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    .footer-contact button:hover {
+      background-color: var(--accent);
+    }
+
     /* Responsive */
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       header h1 {
         font-size: 3rem;
       }
-      header p {
-        font-size: 1.2rem;
-      }
       nav {
         gap: 1.5rem;
-        flex-wrap: wrap;
-        padding: 1rem;
       }
       main {
-        padding: 0 1.5rem;
-      }
-    }
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      nav a {
-        font-size: 0.8rem;
+        padding: 0 1rem;
       }
     }
   </style>
@@ -285,192 +300,142 @@
 <body>
   <header>
     <h1>Innstube</h1>
-    <p>Das legendäre Studentenversteck in den Tiroler Bergen</p>
+    <p>Das legendäre Studentenversteck</p>
   </header>
-
-  <nav>
-    <a href="#oeffnungszeiten">Öffnungszeiten</a>
+  <nav aria-label="Hauptnavigation">
     <a href="#speisekarte">Speisekarte</a>
-    <a href="#hausspezialitaeten">Hausspezialitäten</a>
-    <a href="#bierkarte">Bierkarte</a>
-    <a href="#uebernachtung">Übernachtung</a>
     <a href="#ueberuns">Über uns</a>
+    <a href="#kontakt">Kontakt</a>
   </nav>
 
   <main>
-    <section id="oeffnungszeiten" tabindex="0">
-      <h2>Öffnungszeiten</h2>
-      <p>Montag - Freitag: 16:00 - 24:00 Uhr</p>
-      <p>Samstag: 18:00 - 02:00 Uhr</p>
-      <p>Sonntag: Ruhetag</p>
-    </section>
-
     <section id="speisekarte" tabindex="0">
       <h2>Speisekarte</h2>
 
-      <div class="menu-category">
-        <h3>Snacks & Kleinigkeiten</h3>
+      <div class="menu-category" id="vorspeisen">
+        <h3>Vorspeisen</h3>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Käsestangerl</div>
-            <div class="description">Knusprig und käsig, perfekt zum Bier.</div>
+            <span class="menu-item-name">Käse-Suppe <sup>*</sup></span>
+            <p class="description">Hausgemacht mit Emmentaler und frischen Kräutern</p>
           </div>
-          <div class="menu-item-price">3,50 €</div>
+          <div class="menu-item-price">3,80€</div>
         </div>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Tiroler Speckbrot</div>
-            <div class="description">Hausgemacht, mit frischem Bauernbrot.</div>
+            <span class="menu-item-name">Pommes <sup>*</sup></span>
+            <p class="description">Knusprig & heiß serviert, mit Kräuter-Ketchup</p>
           </div>
-          <div class="menu-item-price">4,50 €</div>
+          <div class="menu-item-price">3,90€</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <span class="menu-item-name">Zwiebelringe <sup>*</sup></span>
+            <p class="description">Goldbraun frittiert mit Dip</p>
+          </div>
+          <div class="menu-item-price">4,30€</div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="hauptspeisen">
+        <h3>Hauptspeisen</h3>
+        <div class="menu-item">
+          <div>
+            <span class="menu-item-name">Burger „Classic“</span>
+            <p class="description">100 % Rindfleisch, Salat, Tomate, Gurke, Zwiebel, hausgemachte Sauce, Kartoffelbrötchen</p>
+          </div>
+          <div class="menu-item-price">8,50€</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <span class="menu-item-name">Veggie Burger (vegan) <sup>*</sup></span>
+            <p class="description">Gegrilltes Gemüse, Salat, Tomate, vegane Sauce, Sesambrötchen</p>
+          </div>
+          <div class="menu-item-price">8,90€</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <span class="menu-item-name">Chili con Carne <sup>*</sup></span>
+            <p class="description">Hausgemacht, mit Maisbrot serviert</p>
+          </div>
+          <div class="menu-item-price premium">9,50€</div>
         </div>
       </div>
 
-      <div class="menu-category">
-        <h3>Warme Speisen</h3>
+      <div class="menu-category" id="getraenke">
+        <h3>Getränke</h3>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Kaspressknödel</div>
-            <div class="description">Traditionelle Käseknödel mit Salat.</div>
+            <span class="menu-item-name">Bier vom Fass</span>
           </div>
-          <div class="menu-item-price">7,90 €</div>
+          <div class="menu-item-price">3,20€</div>
         </div>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Speckknödel</div>
-            <div class="description">Mit frischem Speck und Kräutern.</div>
+            <span class="menu-item-name">Hauswein (Rot & Weiß)</span>
           </div>
-          <div class="menu-item-price">7,90 €</div>
+          <div class="menu-item-price">4,80€</div>
         </div>
-      </div>
-    </section>
-
-    <section id="hausspezialitaeten" tabindex="0">
-      <h2>Hausspezialitäten</h2>
-
-      <div class="menu-category">
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Fleischkas</div>
-            <div class="description">
-              Hausgemacht, herzhaft, und ganz gratis. Weil wir's lieben, dich zu verwöhnen!
-            </div>
+            <span class="menu-item-name">Softdrinks</span>
           </div>
-          <div class="menu-item-price premium">Gratis</div>
-        </div>
-
-        <div class="menu-item">
-          <div>
-            <div class="menu-item-name">Speckplatte</div>
-            <div class="description">
-              Rustikal, deftig und für unsere liebsten Stammgäste – gratis. Vegan? Eher nicht.
-            </div>
-          </div>
-          <div class="menu-item-price premium">Gratis</div>
-        </div>
-
-        <div class="menu-item">
-          <div>
-            <div class="menu-item-name">Der Ski</div>
-            <div class="description">
-              Vier Schnäpse auf Ski, der ultimative Challenge. Preis? <em>Verlierer.</em>
-            </div>
-          </div>
-          <div class="menu-item-price premium">Verlierer</div>
-        </div>
-
-        <div class="menu-item">
-          <div>
-            <div class="menu-item-name">Zipfer Bier</div>
-            <div class="description">
-              Tiroler Bierklassiker – und ja, geht auf's Haus!
-            </div>
-          </div>
-          <div class="menu-item-price premium">Gratis</div>
+          <div class="menu-item-price">2,50€</div>
         </div>
       </div>
-    </section>
-
-    <section id="bierkarte" tabindex="0">
-      <h2>Bierkarte</h2>
-      <div class="menu-category">
-        <div class="menu-item">
-          <div>
-            <div class="menu-item-name">Stiegl Goldbräu</div>
-            <div class="description">Klassisches Märzen, mild und vollmundig.</div>
-          </div>
-          <div class="menu-item-price">4,50 €</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="menu-item-name">Weißbier</div>
-            <div class="description">Fruchtig und spritzig, mit Bananen-Note.</div>
-          </div>
-          <div class="menu-item-price">4,90 €</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="uebernachtung" tabindex="0">
-      <h2>Übernachtung</h2>
-      <p>Gemütliche Zimmer mit Bergblick, rustikal eingerichtet und zum Wohlfühlen.</p>
-      <p>Reservierung unter: <a href="tel:+435123456789">+43 512 3456789</a></p>
     </section>
 
     <section id="ueberuns" tabindex="0">
       <h2>Über uns</h2>
-      <p>
-        Willkommen in der Innstube – dem Herzstück der Tiroler Bergwelt für alle, die gute Stimmung und echte Gemütlichkeit schätzen. Unser Wirt ist eine einzigartige Mischung aus <del>leicht reizbar</del> <ins>liebenswürdig ruppig</ins>, der nicht mit Flüchen, aber auch nicht mit Nettigkeiten spart.
-      </p>
-      <p>
-        Wer zum ersten Mal hereinschneit, sollte wissen: Hier trifft Tradition auf studentischen Esprit – und ab und zu wird mit einem scharfen Spruch gewürzt, der aber immer von Herzen kommt.
-      </p>
-      <p>
-        Unsere Spezialitäten sind ebenso ehrlich wie unser Wirt – immer frisch, immer mit Liebe gemacht und ab und zu auch kostenlos für die echten Freunde der Hausmannskost.
-      </p>
+      <p>Die <del>legendäre</del> gemütliche Studentenbar im Herzen von Innsbruck.</p>
       <ul>
-        <li>Hausgemachter Fleischkas</li>
-        <li>Rustikale Speckplatten</li>
-        <li>Der Ski: vier Schnäpse auf Ski – für die Mutigen</li>
-        <li>Und natürlich Zipfer Bier, das immer frei Haus geht</li>
+        <li>Gemütliches Ambiente &amp; günstige Preise</li>
+        <li>Regelmäßige Live-Musik &amp; Events</li>
+        <li>Ausgezeichnete Auswahl an regionalen Bieren &amp; Weinen</li>
+        <li>Leckere Speisen, frisch &amp; hausgemacht</li>
       </ul>
-      <p>
-        Komm vorbei, fühl dich wie zu Hause – oder wie bei einem Besuch bei der etwas schrulligen, aber herzlichsten Familie Tirols.
-      </p>
+    </section>
+
+    <section id="kontakt" tabindex="0">
+      <h2>Kontaktformular</h2>
+      <p>Schreib uns eine Nachricht, wir melden uns so schnell wie möglich zurück!</p>
+      <form action="#" method="post" class="footer-contact" aria-label="Kontaktformular">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Nachricht:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Absenden</button>
+      </form>
     </section>
   </main>
 
   <footer>
     <div class="footer-content">
       <div class="footer-column">
+        <h3>Adresse</h3>
+        <p>Innstube Studentenbar<br />Universitätsstraße 3<br />6020 Innsbruck</p>
+      </div>
+      <div class="footer-column">
         <h3>Kontakt</h3>
-        <ul>
-          <li>Innstube Tirol</li>
-          <li>Alte Dorfstraße 12</li>
-          <li>Tirol, Österreich</li>
-          <li>Telefon: +43 512 3456789</li>
-          <li>Email: info@innstube.tirol</li>
-        </ul>
+        <p>Tel: +43 512 123456</p>
+        <p>Email: <a href="mailto:info@innstube.at">info@innstube.at</a></p>
       </div>
       <div class="footer-column">
-        <h3>Öffnungszeiten</h3>
+        <h3>Folge uns</h3>
         <ul>
-          <li>Mo-Fr: 16:00 - 24:00</li>
-          <li>Sa: 18:00 - 02:00</li>
-          <li>So: Ruhetag</li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Social</h3>
-        <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">TripAdvisor</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
         </ul>
       </div>
     </div>
     <div class="copyright">
-      &copy; 2025 Innstube Tirol - Alle Rechte vorbehalten
+      &copy; 2025 Innstube Studentenbar. Alle Rechte vorbehalten.
     </div>
   </footer>
 </body>
