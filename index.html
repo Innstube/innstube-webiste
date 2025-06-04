@@ -1,128 +1,230 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gasthaus Innstube</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Open Sans', sans-serif;
-            background-color: #fffdf9;
-            color: #2c2c2c;
-        }
-        header {
-            background-color: #7a5c3e;
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            background-color: #5b422d;
-            padding: 0.75rem;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 2rem;
-            max-width: 900px;
-            margin: auto;
-        }
-        h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        footer {
-            background-color: #7a5c3e;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        img {
-            max-width: 100%;
-            border-radius: 0.5rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gasthaus Innstube</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Reset & Basis */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fefcf8;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a {
+      color: #7a5c3e;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: #a17a4c;
+      outline: none;
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background-color: #7a5c3e;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 1.5px;
+      box-shadow: 0 3px 8px rgb(122 92 62 / 0.4);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2.75rem;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      opacity: 0.85;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #5b422d;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: 1rem 0;
+      box-shadow: inset 0 -3px 5px rgb(0 0 0 / 0.15);
+    }
+    nav a {
+      font-weight: 600;
+      font-size: 1rem;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding-bottom: 0.15rem;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    nav a:hover,
+    nav a:focus {
+      border-bottom-color: #d3b67b;
+      color: #d3b67b;
+    }
+
+    /* Main content sections */
+    main {
+      max-width: 900px;
+      margin: 3rem auto 4rem;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3.5rem;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 2.25rem;
+      color: #7a5c3e;
+      border-bottom: 3px solid #d3b67b;
+      padding-bottom: 0.25rem;
+      margin-bottom: 1.25rem;
+    }
+    p,
+    ul {
+      font-size: 1.05rem;
+      color: #4b4b4b;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      padding: 0.3rem 0;
+      border-bottom: 1px solid #e2d8c3;
+      max-width: 400px;
+    }
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    strong {
+      color: #5b422d;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #7a5c3e;
+      color: white;
+      text-align: center;
+      padding: 1.25rem 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      nav {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.75rem;
+      }
+      ul li {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Gasthaus Innstube</h1>
-        <p>Herzlich. Rustikal. Unvergesslich.</p>
-    </header>
+  <header>
+    <h1>Gasthaus Innstube</h1>
+    <p>Herzlich. Rustikal. Unvergesslich.</p>
+  </header>
 
-    <nav>
-        <a href="#oeffnungszeiten">Öffnungszeiten</a>
-        <a href="#speisekarte">Speisekarte</a>
-        <a href="#bierkarte">Bierkarte</a>
-        <a href="#uebernachtung">Übernachtung</a>
-        <a href="#ueberuns">Über uns</a>
-    </nav>
+  <nav>
+    <a href="#oeffnungszeiten">Öffnungszeiten</a>
+    <a href="#speisekarte">Speisekarte</a>
+    <a href="#bierkarte">Bierkarte</a>
+    <a href="#uebernachtung">Übernachtung</a>
+    <a href="#ueberuns">Über uns</a>
+  </nav>
 
-    <section id="oeffnungszeiten">
-        <h2>Öffnungszeiten</h2>
-        <p><strong>Montag & Dienstag:</strong> Ruhetag<br>
-        <strong>Mittwoch – Freitag:</strong> 16:00 – 23:00 Uhr<br>
-        <strong>Samstag & Sonntag:</strong> 11:00 – 23:00 Uhr</p>
+  <main>
+    <section id="oeffnungszeiten" tabindex="0">
+      <h2>Öffnungszeiten</h2>
+      <p>
+        <strong>Montag &amp; Dienstag:</strong> Ruhetag<br />
+        <strong>Mittwoch – Freitag:</strong> 16:00 – 23:00 Uhr<br />
+        <strong>Samstag &amp; Sonntag:</strong> 11:00 – 23:00 Uhr
+      </p>
     </section>
 
-    <section id="speisekarte">
-        <h2>Speisekarte</h2>
-        <ul>
-            <li>Tiroler Gröstl – €10,90</li>
-            <li>Schnitzel mit Pommes – €12,50</li>
-            <li>Kaiserschmarrn mit Apfelmus – €8,90</li>
-            <li>Veganes Linsenragout – €9,90</li>
-        </ul>
+    <section id="speisekarte" tabindex="0">
+      <h2>Speisekarte</h2>
+      <ul>
+        <li>Tiroler Gröstl &mdash; €10,90</li>
+        <li>Schnitzel mit Pommes &mdash; €12,50</li>
+        <li>Kaiserschmarrn mit Apfelmus &mdash; €8,90</li>
+        <li>Veganes Linsenragout &mdash; €9,90</li>
+      </ul>
     </section>
 
-    <section id="bierkarte">
-        <h2>Bierkarte</h2>
-        <ul>
-            <li>Innstube Hell – 0,5l – €4,20</li>
-            <li>Weißbier – 0,5l – €4,50</li>
-            <li>Dunkles Zwickl – 0,5l – €4,30</li>
-            <li>Alkoholfreies Bier – 0,5l – €3,90</li>
-        </ul>
+    <section id="bierkarte" tabindex="0">
+      <h2>Bierkarte</h2>
+      <ul>
+        <li>Innstube Hell – 0,5l &mdash; €4,20</li>
+        <li>Weißbier – 0,5l &mdash; €4,50</li>
+        <li>Dunkles Zwickl – 0,5l &mdash; €4,30</li>
+        <li>Alkoholfreies Bier – 0,5l &mdash; €3,90</li>
+      </ul>
     </section>
 
-    <section id="uebernachtung">
-        <h2>Übernachtungsmöglichkeiten</h2>
-        <p>Unsere gemütlichen Zimmer laden zum Verweilen ein:</p>
-        <ul>
-            <li>Einzelzimmer – ab €55/Nacht inkl. Frühstück</li>
-            <li>Doppelzimmer – ab €89/Nacht inkl. Frühstück</li>
-            <li>Familienzimmer – ab €120/Nacht inkl. Frühstück</li>
-        </ul>
+    <section id="uebernachtung" tabindex="0">
+      <h2>Übernachtungsmöglichkeiten</h2>
+      <p>Unsere gemütlichen Zimmer laden zum Verweilen ein:</p>
+      <ul>
+        <li>Einzelzimmer &mdash; ab €55/Nacht inkl. Frühstück</li>
+        <li>Doppelzimmer &mdash; ab €89/Nacht inkl. Frühstück</li>
+        <li>Familienzimmer &mdash; ab €120/Nacht inkl. Frühstück</li>
+      </ul>
     </section>
 
-    <section id="ueberuns">
-        <h2>Über uns</h2>
-        <p>Die Innstube ist ein familiengeführtes Gasthaus im Herzen Tirols. Seit 1892 servieren wir regionale Spezialitäten mit viel Herz und Leidenschaft. Unsere Gäste schätzen besonders die urige Atmosphäre, unsere hauseigenen Biere und den herrlichen Ausblick auf die Alpen.</p>
-        <div class="grid">
-            <img src="https://source.unsplash.com/featured/?mountain,inn" alt="Bergblick">
-            <img src="https://source.unsplash.com/featured/?restaurant" alt="Gaststube">
-            <img src="https://source.unsplash.com/featured/?beer" alt="Bier">
-        </div>
+    <section id="ueberuns" tabindex="0">
+      <h2>Über uns</h2>
+      <p>
+        Die Innstube ist ein familiengeführtes Gasthaus im Herzen Tirols. Seit
+        1892 servieren wir regionale Spezialitäten mit viel Herz und
+        Leidenschaft. Unsere Gäste schätzen besonders die urige Atmosphäre,
+        unsere hauseigenen Biere und den herrlichen Ausblick auf die Alpen.
+      </p>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Gasthaus Innstube | Musterstraße 12, 6020 Innsbruck | Tel: +43 512 123456</p>
-    </footer>
+  <footer>
+    <p>
+      &copy; 2025 Gasthaus Innstube | Musterstraße 12, 6020 Innsbruck | Tel:
+      +43 512 123456
+    </p>
+  </footer>
 </body>
 </html>
