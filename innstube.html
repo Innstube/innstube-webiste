@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gasthaus Innstube</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #fffdf9;
+            color: #2c2c2c;
+        }
+        header {
+            background-color: #7a5c3e;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            background-color: #5b422d;
+            padding: 0.75rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        footer {
+            background-color: #7a5c3e;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gasthaus Innstube</h1>
+        <p>Herzlich. Rustikal. Unvergesslich.</p>
+    </header>
+
+    <nav>
+        <a href="#oeffnungszeiten">Öffnungszeiten</a>
+        <a href="#speisekarte">Speisekarte</a>
+        <a href="#bierkarte">Bierkarte</a>
+        <a href="#uebernachtung">Übernachtung</a>
+        <a href="#ueberuns">Über uns</a>
+    </nav>
+
+    <section id="oeffnungszeiten">
+        <h2>Öffnungszeiten</h2>
+        <p><strong>Montag & Dienstag:</strong> Ruhetag<br>
+        <strong>Mittwoch – Freitag:</strong> 16:00 – 23:00 Uhr<br>
+        <strong>Samstag & Sonntag:</strong> 11:00 – 23:00 Uhr</p>
+    </section>
+
+    <section id="speisekarte">
+        <h2>Speisekarte</h2>
+        <ul>
+            <li>Tiroler Gröstl – €10,90</li>
+            <li>Schnitzel mit Pommes – €12,50</li>
+            <li>Kaiserschmarrn mit Apfelmus – €8,90</li>
+            <li>Veganes Linsenragout – €9,90</li>
+        </ul>
+    </section>
+
+    <section id="bierkarte">
+        <h2>Bierkarte</h2>
+        <ul>
+            <li>Innstube Hell – 0,5l – €4,20</li>
+            <li>Weißbier – 0,5l – €4,50</li>
+            <li>Dunkles Zwickl – 0,5l – €4,30</li>
+            <li>Alkoholfreies Bier – 0,5l – €3,90</li>
+        </ul>
+    </section>
+
+    <section id="uebernachtung">
+        <h2>Übernachtungsmöglichkeiten</h2>
+        <p>Unsere gemütlichen Zimmer laden zum Verweilen ein:</p>
+        <ul>
+            <li>Einzelzimmer – ab €55/Nacht inkl. Frühstück</li>
+            <li>Doppelzimmer – ab €89/Nacht inkl. Frühstück</li>
+            <li>Familienzimmer – ab €120/Nacht inkl. Frühstück</li>
+        </ul>
+    </section>
+
+    <section id="ueberuns">
+        <h2>Über uns</h2>
+        <p>Die Innstube ist ein familiengeführtes Gasthaus im Herzen Tirols. Seit 1892 servieren wir regionale Spezialitäten mit viel Herz und Leidenschaft. Unsere Gäste schätzen besonders die urige Atmosphäre, unsere hauseigenen Biere und den herrlichen Ausblick auf die Alpen.</p>
+        <div class="grid">
+            <img src="https://source.unsplash.com/featured/?mountain,inn" alt="Bergblick">
+            <img src="https://source.unsplash.com/featured/?restaurant" alt="Gaststube">
+            <img src="https://source.unsplash.com/featured/?beer" alt="Bier">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gasthaus Innstube | Musterstraße 12, 6020 Innsbruck | Tel: +43 512 123456</p>
+    </footer>
+</body>
+</html>
