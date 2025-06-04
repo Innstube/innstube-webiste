@@ -42,8 +42,8 @@
 
     /* Header */
     header {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                  url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80') center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                  url('https://images.unsplash.com/photo-1583845112203-454c7c581d62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80') center/cover no-repeat;
       color: white;
       padding: 8rem 1rem 6rem;
       text-align: center;
@@ -67,6 +67,7 @@
       letter-spacing: 2px;
       position: relative;
       z-index: 2;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     }
     header p {
       font-family: 'EB Garamond', serif;
@@ -76,6 +77,7 @@
       opacity: 0.9;
       position: relative;
       z-index: 2;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
 
     /* Navigation */
@@ -243,56 +245,38 @@
       color: #aaa;
     }
 
-    /* Kontaktformular */
-    .footer-contact form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .footer-contact label {
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: var(--gold);
-    }
-    .footer-contact input,
-    .footer-contact textarea {
-      padding: 0.5rem;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-      font-family: inherit;
-    }
-    .footer-contact input:focus,
-    .footer-contact textarea:focus {
-      outline: 2px solid var(--secondary);
-      background-color: #fff;
-      color: var(--dark);
-    }
-    .footer-contact button {
-      background-color: var(--secondary);
-      border: none;
-      padding: 0.7rem;
-      color: white;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-    .footer-contact button:hover {
-      background-color: var(--accent);
-    }
-
     /* Responsive */
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       header h1 {
         font-size: 3rem;
       }
+      header p {
+        font-size: 1.2rem;
+      }
       nav {
         gap: 1.5rem;
+        flex-wrap: wrap;
+        padding: 1rem;
       }
       main {
-        padding: 0 1rem;
+        padding: 0 1.5rem;
+      }
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      nav {
+        gap: 1rem;
+      }
+      nav a {
+        font-size: 0.8rem;
+      }
+      h2 {
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -300,142 +284,307 @@
 <body>
   <header>
     <h1>Innstube</h1>
-    <p>Das legendäre Studentenversteck</p>
+    <p>Offiziell illegal • Inoffiziell legendär</p>
   </header>
-  <nav aria-label="Hauptnavigation">
+
+  <nav>
+    <a href="#oeffnungszeiten">Öffnungszeiten</a>
     <a href="#speisekarte">Speisekarte</a>
+    <a href="#hausspezialitaeten">Hausspezialitäten</a>
+    <a href="#bierkarte">Bierkarte</a>
+    <a href="#uebernachtung">Übernachtung</a>
     <a href="#ueberuns">Über uns</a>
-    <a href="#kontakt">Kontakt</a>
   </nav>
 
   <main>
+    <section id="oeffnungszeiten" tabindex="0">
+      <h2>Öffnungszeiten</h2>
+      <div class="menu-category">
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Montag & Dienstag</div>
+            <div class="description">(Theoretisch Ruhetag, praktisch kommt Porta trotzdem rein wenn er Bock hat)</div>
+          </div>
+          <div class="menu-item-price">Geschlossen*</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Mittwoch – Freitag</div>
+          </div>
+          <div class="menu-item-price">Ab 16 Uhr bis die Nachbarn meckern</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Samstag & Sonntag</div>
+            <div class="description">Frühschoppen mit Katerfrühstück</div>
+          </div>
+          <div class="menu-item-price">Ab 11 Uhr</div>
+        </div>
+      </div>
+      <p style="font-style: italic; margin-top: 1rem;">*Außer jemand bringt Schnaps mit</p>
+    </section>
+
     <section id="speisekarte" tabindex="0">
       <h2>Speisekarte</h2>
-
-      <div class="menu-category" id="vorspeisen">
-        <h3>Vorspeisen</h3>
+      <div class="menu-category">
+        <h3>Hausgemachte "Delikatessen"</h3>
         <div class="menu-item">
           <div>
-            <span class="menu-item-name">Käse-Suppe <sup>*</sup></span>
-            <p class="description">Hausgemacht mit Emmentaler und frischen Kräutern</p>
+            <div class="menu-item-name">Toast Hawaii</div>
+            <div class="description">Mit 3 Tage altem Ananasrest vom Asialaden</div>
           </div>
-          <div class="menu-item-price">3,80€</div>
+          <div class="menu-item-price">€3,50</div>
         </div>
         <div class="menu-item">
           <div>
-            <span class="menu-item-name">Pommes <sup>*</sup></span>
-            <p class="description">Knusprig & heiß serviert, mit Kräuter-Ketchup</p>
+            <div class="menu-item-name">Ramen instant</div>
+            <div class="description">Aus der Packung, aber wir tun so als wär's hausgemacht</div>
           </div>
-          <div class="menu-item-price">3,90€</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <span class="menu-item-name">Zwiebelringe <sup>*</sup></span>
-            <p class="description">Goldbraun frittiert mit Dip</p>
-          </div>
-          <div class="menu-item-price">4,30€</div>
+          <div class="menu-item-price">€5,90</div>
         </div>
       </div>
-
-      <div class="menu-category" id="hauptspeisen">
-        <h3>Hauptspeisen</h3>
+      
+      <div class="menu-category">
+        <h3>Premium Müll</h3>
         <div class="menu-item">
           <div>
-            <span class="menu-item-name">Burger „Classic“</span>
-            <p class="description">100 % Rindfleisch, Salat, Tomate, Gurke, Zwiebel, hausgemachte Sauce, Kartoffelbrötchen</p>
+            <div class="menu-item-name">Dönerteller vom Vortag</div>
+            <div class="description">Mit extra Darmbakterien-Kick</div>
           </div>
-          <div class="menu-item-price">8,50€</div>
+          <div class="menu-item-price">€7,90</div>
         </div>
         <div class="menu-item">
           <div>
-            <span class="menu-item-name">Veggie Burger (vegan) <sup>*</sup></span>
-            <p class="description">Gegrilltes Gemüse, Salat, Tomate, vegane Sauce, Sesambrötchen</p>
+            <div class="menu-item-name">Pommes Mayo</div>
+            <div class="description">Mayo vielleicht abgelaufen, Risiko inklusive</div>
           </div>
-          <div class="menu-item-price">8,90€</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <span class="menu-item-name">Chili con Carne <sup>*</sup></span>
-            <p class="description">Hausgemacht, mit Maisbrot serviert</p>
-          </div>
-          <div class="menu-item-price premium">9,50€</div>
+          <div class="menu-item-price">€4,50</div>
         </div>
       </div>
+    </section>
 
-      <div class="menu-category" id="getraenke">
-        <h3>Getränke</h3>
+    <section id="hausspezialitaeten" tabindex="0">
+      <h2>Hausspezialitäten</h2>
+      <p>Unsere "kulinarischen" Highlights (solange der Vorrat reicht):</p>
+      
+      <div class="menu-category">
+        <h3>Für echte Tiroler</h3>
         <div class="menu-item">
           <div>
-            <span class="menu-item-name">Bier vom Fass</span>
+            <div class="menu-item-name">Fleischkas-Semmal</div>
+            <div class="description">Selbstgemacht (von der Fleischkas-Theke beim Spar)</div>
           </div>
-          <div class="menu-item-price">3,20€</div>
+          <div class="menu-item-price">Gratis</div>
         </div>
         <div class="menu-item">
           <div>
-            <span class="menu-item-name">Hauswein (Rot & Weiß)</span>
+            <div class="menu-item-name">Speckplatte um 150</div>
+            <div class="description">Speckreste vom letzten Bergurlaub (Haltbarkeitsdatum unbekannt)</div>
           </div>
-          <div class="menu-item-price">4,80€</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <span class="menu-item-name">Softdrinks</span>
-          </div>
-          <div class="menu-item-price">2,50€</div>
+          <div class="menu-item-price">Gratis</div>
         </div>
       </div>
+      
+      <div class="menu-category">
+        <h3>Trinkspezialitäten</h3>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Der Ski</div>
+            <div class="description">4 Schnäpse serviert auf einem Ski (Original vom Wirt 1987)</div>
+          </div>
+          <div class="menu-item-price">Verlierer</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Der Lawinenabgang</div>
+            <div class="description">5 verschiedene Schnäpse in einem Glas - Überlebenschance 50%</div>
+          </div>
+          <div class="menu-item-price">€8,50</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Gletscherspalte</div>
+            <div class="description">Wodka mit Minze und Blaufärbung (schmeckt wie Zahnpasta, wirkt wie ein Tritt)</div>
+          </div>
+          <div class="menu-item-price">€6,00</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bierkarte" tabindex="0">
+      <h2>Bierkarte</h2>
+      <div class="menu-category">
+        <h3>Standard</h3>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Billigst-Bier – 0,5l</div>
+            <div class="description">Kalt oder lauwarm, je nachdem ob der Kühlschrank funktioniert</div>
+          </div>
+          <div class="menu-item-price">€1,50</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Oettinger Export – 0,5l</div>
+            <div class="description">Für Studenten und Menschen ohne Geschmacksnerven</div>
+          </div>
+          <div class="menu-item-price">€1,80</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Zipfer Bier – 0,5l</div>
+            <div class="description">Nur wenn der Wirt dich mag (ansonsten "aus")</div>
+          </div>
+          <div class="menu-item-price">Gratis</div>
+        </div>
+      </div>
+      
+      <div class="menu-category">
+        <h3>Premium (wenn Mutti zahlt)</h3>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Augustiner – 0,5l</div>
+            <div class="description">Nur wenn Porta gute Laune hat</div>
+          </div>
+          <div class="menu-item-price">€3,50</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Whisky-Cola</div>
+            <div class="description">3% Whisky, 97% Billig-Cola</div>
+          </div>
+          <div class="menu-item-price">€4,00</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Der "Ich hab's nötig"</div>
+            <div class="description">Doppelter Korn mit Energydrink (Risiko auf Herzstillstand inklusive)</div>
+          </div>
+          <div class="menu-item-price">€5,50</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="uebernachtung" tabindex="0">
+      <h2>Übernachtungsmöglichkeiten</h2>
+      <p>Unsere "Luxus"-Unterkünfte:</p>
+      
+      <div class="menu-category">
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Couch mit Flecken</div>
+            <div class="description">Mit gratis Katzenhaaren und mysteriösem Geruch</div>
+          </div>
+          <div class="menu-item-price">€0,00*</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Balkon (nur im Sommer)</div>
+            <div class="description">Mit Stechmücken inklusive</div>
+          </div>
+          <div class="menu-item-price">€0,00*</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Badewanne</div>
+            <div class="description">Nur für Hartgesottene (Handtuch nicht inklusive)</div>
+          </div>
+          <div class="menu-item-price">€0,00*</div>
+        </div>
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Der "Abstellraum"</div>
+            <div class="description">Mit Putzeimer als Kopfkissen (Mindestalkoholpegel 2.0 Promille)</div>
+          </div>
+          <div class="menu-item-price">€0,00*</div>
+        </div>
+      </div>
+      <p style="font-style: italic; margin-top: 1rem;">*Preis steigt proportional zur Anzahl der konsumierten Getränke</p>
     </section>
 
     <section id="ueberuns" tabindex="0">
       <h2>Über uns</h2>
-      <p>Die <del>legendäre</del> gemütliche Studentenbar im Herzen von Innsbruck.</p>
-      <ul>
-        <li>Gemütliches Ambiente &amp; günstige Preise</li>
-        <li>Regelmäßige Live-Musik &amp; Events</li>
-        <li>Ausgezeichnete Auswahl an regionalen Bieren &amp; Weinen</li>
-        <li>Leckere Speisen, frisch &amp; hausgemacht</li>
+      <p>
+        Die <del>Bruchbude</del> <ins>Innstube</ins> ist das reinste Wohnzimmer-Projekt von unserem geizigen aber liebenswerten Wirt Porta. Was als normale Studentenbude begann, hat sich zu einem <strong>illegalen</strong> <ins>ganz legalen</ins> Spontan-Wirtshaus entwickelt, wo regelmäßig die Polizei <del>wegen Ruhestörung</del> zum gemütlichen Schnapserl vorbeischaut.
+      </p>
+      
+      <p>
+        <strong>Unser Wirt Porta in seiner ganzen Pracht:</strong><br>
+        - Liebevoll wie ein Bär, aggressiv wie ein Hornissenstich<br>
+        - Schreit dich an wenn du sein Bier anfasst, schenkt dir aber 5 Minuten später selbst eins ein<br>
+        - Hat schon mindestens 3 Kneipenschlägereien überlebt (und 2 davon gewonnen)<br>
+        - Sein Motto: "Ihr seids die größten Deppen... aber komm her, ich hab noch was für dich!"<br>
+        - Kann innerhalb von 5 Minuten von "RAUS HIER!" zu "Bleib doch noch a bissl" wechseln
+      </p>
+
+      <p>
+        Unsere Atmosphäre ist eine Mischung aus:
+      </p>
+      <ul style="list-style-type: '🍺 '; padding-left: 1.5rem;">
+        <li>50% alte, durchgesoffene Couch</li>
+        <li>30% abgeranzte Barhocker mit Wackelbein</li>
+        <li>15% Küchentisch mit eingebrannten Vodka-Flecken</li>
+        <li>5% mysteriöse klebrige Flecken (wir fragen nicht nach)</li>
       </ul>
-    </section>
 
-    <section id="kontakt" tabindex="0">
-      <h2>Kontaktformular</h2>
-      <p>Schreib uns eine Nachricht, wir melden uns so schnell wie möglich zurück!</p>
-      <form action="#" method="post" class="footer-contact" aria-label="Kontaktformular">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+      <p>
+        <strong>Unser Wirt in drei Akten:</strong><br>
+        1. "Kommts herein, Leute! Alles kein Problem!"<br>
+        2. "SCHEIßE! Wer hat schon wieder das letzte Bier genommen?!"<br>
+        3. *schläft betrunken in der Ecke* "Ihr seids die besten... echt jetzt..."
+      </p>
 
-        <label for="email">E-Mail:</label>
-        <input type="email" id="email" name="email" required />
+      <p>
+        Besondere Dienstleistungen:
+      </p>
+      <ul style="list-style-type: '🤬 '; padding-left: 1.5rem;">
+        <li><strong>Kostenlose Beleidigungen</strong> ab 23 Uhr oder nach dem 5. Bier</li>
+        <li><strong>Hausgemachte Schärfe</strong>: Unsere Chili con Carne führt garantiert zu Darmbeschwerden</li>
+        <li><strong>Übernachtungsmöglichkeit</strong> (aka "du pennst hier ein und putzt morgen")</li>
+        <li><strong>Persönliche Betreuung</strong>: Porta wird dich entweder adoptieren oder rausschmeißen - Überraschung!</li>
+      </ul>
 
-        <label for="message">Nachricht:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+      <p>
+        Trotz allem: Die Innstube hat Charme wie ein dreiäugiger Straßenköter - irgendwie eklig, aber man kann nicht anders als ihn lieb zu haben. Porta würde uns zwar gerade wieder anschreien weil wir das hier schreiben, aber morgen früh steht er wieder mit Kater und selbstgemachtem Frühstück vor der Tür.
+      </p>
 
-        <button type="submit">Absenden</button>
-      </form>
+      <p style="font-style: italic; margin-top: 2rem;">
+        P.S.: Die Polizei war nie hier. Falls doch, waren wir das nicht. Und die kaputte Toilette war schon immer so.
+      </p>
     </section>
   </main>
 
   <footer>
     <div class="footer-content">
       <div class="footer-column">
-        <h3>Adresse</h3>
-        <p>Innstube Studentenbar<br />Universitätsstraße 3<br />6020 Innsbruck</p>
-      </div>
-      <div class="footer-column">
         <h3>Kontakt</h3>
-        <p>Tel: +43 512 123456</p>
-        <p>Email: <a href="mailto:info@innstube.at">info@innstube.at</a></p>
-      </div>
-      <div class="footer-column">
-        <h3>Folge uns</h3>
         <ul>
-          <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
-          <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
+          <li>Musterstraße 12</li>
+          <li>6020 Innsbruck</li>
+          <li>+43 512 123456</li>
+          <li>reservierung@innstube.com</li>
         </ul>
       </div>
-    </div>
-    <div class="copyright">
-      &copy; 2025 Innstube Studentenbar. Alle Rechte vorbehalten.
+      <div class="footer-column">
+        <h3>Wichtige Infos</h3>
+        <ul>
+          <li>Hausordnung: Keine Regeln außer Portas Laune</li>
+          <li>Küchenschlüssel: Unter der Fußmatte</li>
+          <li>Notfallnummer: Pizza-Service</li>
+          <li>Portas Laune: Unvorhersehbar</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Disclaimer</h3>
+        <ul>
+          <li>Wir übernehmen keine Haftung</li>
+          <li>Für nichts. Gar nichts.</li>
+          <li>Besucht uns auf eigene Gefahr</li>
+          <li>Porta auch nicht</li>
+        </ul>
+      </div>
+      <div class="copyright">
+        &copy; 2025 Innstube | Alle Angaben frei erfunden | <a href="#">Impressum</a> (gibts nicht) | <a href="#">Datenschutz</a> (lol)
+      </div>
     </div>
   </footer>
 </body>
