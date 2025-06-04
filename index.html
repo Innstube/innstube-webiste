@@ -4,9 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Innstube | Das legendäre Studentenversteck</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=EB+Garamond:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
   <style>
     :root {
       --primary: #2a363b;
@@ -16,7 +19,7 @@
       --dark: #1a1a1a;
       --gold: #d4af37;
     }
-    
+
     /* Reset & Basis */
     * {
       box-sizing: border-box;
@@ -24,7 +27,7 @@
       padding: 0;
     }
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       background-color: var(--light);
       color: var(--dark);
       line-height: 1.7;
@@ -42,40 +45,46 @@
 
     /* Header */
     header {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                  url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80') center/cover no-repeat;
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.75),
+          rgba(0, 0, 0, 0.75)
+        ),
+        url("https://images.unsplash.com/photo-1607158571376-78914d442cd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80")
+          center/cover no-repeat;
       color: white;
       padding: 8rem 1rem 6rem;
       text-align: center;
       position: relative;
     }
     header::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -1px;
       left: 0;
       width: 100%;
       height: 100px;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
       z-index: 1;
     }
     header h1 {
-      font-family: 'EB Garamond', serif;
+      font-family: "EB Garamond", serif;
       font-weight: 600;
       font-size: 4.5rem;
       margin: 0;
       letter-spacing: 2px;
       position: relative;
       z-index: 2;
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
     }
     header p {
-      font-family: 'EB Garamond', serif;
+      font-family: "EB Garamond", serif;
       font-size: 1.5rem;
       font-style: italic;
       margin-top: 1rem;
       opacity: 0.9;
       position: relative;
       z-index: 2;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
     }
 
     /* Navigation */
@@ -88,7 +97,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     }
     nav a {
       font-weight: 500;
@@ -116,7 +125,7 @@
       position: relative;
     }
     h2 {
-      font-family: 'EB Garamond', serif;
+      font-family: "EB Garamond", serif;
       font-weight: 600;
       font-size: 2.5rem;
       color: var(--primary);
@@ -125,7 +134,7 @@
       display: inline-block;
     }
     h2::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -10px;
       left: 0;
@@ -139,13 +148,13 @@
       margin-bottom: 1.5rem;
       line-height: 1.8;
     }
-    
+
     /* Menu items */
     .menu-category {
       margin-bottom: 3rem;
     }
     .menu-category h3 {
-      font-family: 'EB Garamond', serif;
+      font-family: "EB Garamond", serif;
       font-size: 1.5rem;
       color: var(--primary);
       margin: 2rem 0 1rem;
@@ -216,7 +225,7 @@
       text-align: left;
     }
     .footer-column h3 {
-      font-family: 'EB Garamond', serif;
+      font-family: "EB Garamond", serif;
       font-size: 1.3rem;
       margin-bottom: 1.5rem;
       color: var(--gold);
@@ -236,7 +245,7 @@
     .copyright {
       margin-top: 3rem;
       padding-top: 1.5rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
       grid-column: 1 / -1;
       text-align: center;
       font-size: 0.9rem;
@@ -267,14 +276,8 @@
       header p {
         font-size: 1rem;
       }
-      nav {
-        gap: 1rem;
-      }
       nav a {
         font-size: 0.8rem;
-      }
-      h2 {
-        font-size: 1.8rem;
       }
     }
   </style>
@@ -282,12 +285,13 @@
 <body>
   <header>
     <h1>Innstube</h1>
-    <p>Offiziell illegal • Inoffiziell legendär</p>
+    <p>Das legendäre Studentenversteck in den Tiroler Bergen</p>
   </header>
 
   <nav>
     <a href="#oeffnungszeiten">Öffnungszeiten</a>
     <a href="#speisekarte">Speisekarte</a>
+    <a href="#hausspezialitaeten">Hausspezialitäten</a>
     <a href="#bierkarte">Bierkarte</a>
     <a href="#uebernachtung">Übernachtung</a>
     <a href="#ueberuns">Über uns</a>
@@ -296,66 +300,93 @@
   <main>
     <section id="oeffnungszeiten" tabindex="0">
       <h2>Öffnungszeiten</h2>
-      <div class="menu-category">
-        <div class="menu-item">
-          <div>
-            <div class="menu-item-name">Montag & Dienstag</div>
-            <div class="description">(Theoretisch Ruhetag, praktisch kommt Maxi trotzdem rein wenn er Bock hat)</div>
-          </div>
-          <div class="menu-item-price">Geschlossen*</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="menu-item-name">Mittwoch – Freitag</div>
-          </div>
-          <div class="menu-item-price">Ab 16 Uhr bis die Nachbarn meckern</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="menu-item-name">Samstag & Sonntag</div>
-            <div class="description">Frühschoppen mit Katerfrühstück</div>
-          </div>
-          <div class="menu-item-price">Ab 11 Uhr</div>
-        </div>
-      </div>
-      <p style="font-style: italic; margin-top: 1rem;">*Außer jemand bringt Schnaps mit</p>
+      <p>Montag - Freitag: 16:00 - 24:00 Uhr</p>
+      <p>Samstag: 18:00 - 02:00 Uhr</p>
+      <p>Sonntag: Ruhetag</p>
     </section>
 
     <section id="speisekarte" tabindex="0">
       <h2>Speisekarte</h2>
+
       <div class="menu-category">
-        <h3>Hausgemachte "Delikatessen"</h3>
+        <h3>Snacks & Kleinigkeiten</h3>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Toast Hawaii</div>
-            <div class="description">Mit 3 Tage altem Ananasrest vom Asialaden</div>
+            <div class="menu-item-name">Käsestangerl</div>
+            <div class="description">Knusprig und käsig, perfekt zum Bier.</div>
           </div>
-          <div class="menu-item-price">€3,50</div>
+          <div class="menu-item-price">3,50 €</div>
         </div>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Ramen instant</div>
-            <div class="description">Aus der Packung, aber wir tun so als wär's hausgemacht</div>
+            <div class="menu-item-name">Tiroler Speckbrot</div>
+            <div class="description">Hausgemacht, mit frischem Bauernbrot.</div>
           </div>
-          <div class="menu-item-price">€5,90</div>
+          <div class="menu-item-price">4,50 €</div>
         </div>
       </div>
-      
+
       <div class="menu-category">
-        <h3>Premium Müll</h3>
+        <h3>Warme Speisen</h3>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Dönerteller vom Vortag</div>
-            <div class="description">Mit extra Darmbakterien-Kick</div>
+            <div class="menu-item-name">Kaspressknödel</div>
+            <div class="description">Traditionelle Käseknödel mit Salat.</div>
           </div>
-          <div class="menu-item-price">€7,90</div>
+          <div class="menu-item-price">7,90 €</div>
         </div>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Pommes Mayo</div>
-            <div class="description">Mayo vielleicht abgelaufen, Risiko inklusive</div>
+            <div class="menu-item-name">Speckknödel</div>
+            <div class="description">Mit frischem Speck und Kräutern.</div>
           </div>
-          <div class="menu-item-price">€4,50</div>
+          <div class="menu-item-price">7,90 €</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hausspezialitaeten" tabindex="0">
+      <h2>Hausspezialitäten</h2>
+
+      <div class="menu-category">
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Fleischkas</div>
+            <div class="description">
+              Hausgemacht, herzhaft, und ganz gratis. Weil wir's lieben, dich zu verwöhnen!
+            </div>
+          </div>
+          <div class="menu-item-price premium">Gratis</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Speckplatte</div>
+            <div class="description">
+              Rustikal, deftig und für unsere liebsten Stammgäste – gratis. Vegan? Eher nicht.
+            </div>
+          </div>
+          <div class="menu-item-price premium">Gratis</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Der Ski</div>
+            <div class="description">
+              Vier Schnäpse auf Ski, der ultimative Challenge. Preis? <em>Verlierer.</em>
+            </div>
+          </div>
+          <div class="menu-item-price premium">Verlierer</div>
+        </div>
+
+        <div class="menu-item">
+          <div>
+            <div class="menu-item-name">Zipfer Bier</div>
+            <div class="description">
+              Tiroler Bierklassiker – und ja, geht auf's Haus!
+            </div>
+          </div>
+          <div class="menu-item-price premium">Gratis</div>
         </div>
       </div>
     </section>
@@ -363,110 +394,48 @@
     <section id="bierkarte" tabindex="0">
       <h2>Bierkarte</h2>
       <div class="menu-category">
-        <h3>Standard</h3>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Billigst-Bier – 0,5l</div>
-            <div class="description">Kalt oder lauwarm, je nachdem ob der Kühlschrank funktioniert</div>
+            <div class="menu-item-name">Stiegl Goldbräu</div>
+            <div class="description">Klassisches Märzen, mild und vollmundig.</div>
           </div>
-          <div class="menu-item-price">€1,50</div>
+          <div class="menu-item-price">4,50 €</div>
         </div>
         <div class="menu-item">
           <div>
-            <div class="menu-item-name">Oettinger Export – 0,5l</div>
-            <div class="description">Für Studenten und Menschen ohne Geschmacksnerven</div>
+            <div class="menu-item-name">Weißbier</div>
+            <div class="description">Fruchtig und spritzig, mit Bananen-Note.</div>
           </div>
-          <div class="menu-item-price">€1,80</div>
-        </div>
-      </div>
-      
-      <div class="menu-category">
-        <h3>Premium (wenn Mutti zahlt)</h3>
-        <div class="menu-item">
-          <div>
-            <div class="menu-item-name">Augustiner – 0,5l</div>
-            <div class="description">Nur wenn Maxi gute Laune hat</div>
-          </div>
-          <div class="menu-item-price">€3,50</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="menu-item-name">Whisky-Cola</div>
-            <div class="description">3% Whisky, 97% Billig-Cola</div>
-          </div>
-          <div class="menu-item-price">€4,00</div>
+          <div class="menu-item-price">4,90 €</div>
         </div>
       </div>
     </section>
 
     <section id="uebernachtung" tabindex="0">
-      <h2>Übernachtungsmöglichkeiten</h2>
-      <p>Unsere "Luxus"-Unterkünfte:</p>
-      
-      <div class="menu-category">
-        <div class="menu-item">
-          <div>
-            <div class="menu-item-name">Couch mit Flecken</div>
-            <div class="description">Mit gratis Katzenhaaren und mysteriösem Geruch</div>
-          </div>
-          <div class="menu-item-price">€0,00*</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="menu-item-name">Balkon (nur im Sommer)</div>
-            <div class="description">Mit Stechmücken inklusive</div>
-          </div>
-          <div class="menu-item-price">€0,00*</div>
-        </div>
-        <div class="menu-item">
-          <div>
-            <div class="menu-item-name">Badewanne</div>
-            <div class="description">Nur für Hartgesottene (Handtuch nicht inklusive)</div>
-          </div>
-          <div class="menu-item-price">€0,00*</div>
-        </div>
-      </div>
-      <p style="font-style: italic; margin-top: 1rem;">*Preis steigt proportional zur Anzahl der konsumierten Getränke</p>
+      <h2>Übernachtung</h2>
+      <p>Gemütliche Zimmer mit Bergblick, rustikal eingerichtet und zum Wohlfühlen.</p>
+      <p>Reservierung unter: <a href="tel:+435123456789">+43 512 3456789</a></p>
     </section>
 
     <section id="ueberuns" tabindex="0">
       <h2>Über uns</h2>
       <p>
-        Die <del>Bruchbude</del> <ins>Innstube</ins> ist das reinste Wohnzimmer-Projekt von unserem geizigen aber liebenswerten Wirt Maxi. Was als normale Studentenbude begann, hat sich zu einem <strong>illegalen</strong> <ins>ganz legalen</ins> Spontan-Wirtshaus entwickelt, wo regelmäßig die Polizei <del>wegen Ruhestörung</del> zum gemütlichen Schnapserl vorbeischaut.
+        Willkommen in der Innstube – dem Herzstück der Tiroler Bergwelt für alle, die gute Stimmung und echte Gemütlichkeit schätzen. Unser Wirt ist eine einzigartige Mischung aus <del>leicht reizbar</del> <ins>liebenswürdig ruppig</ins>, der nicht mit Flüchen, aber auch nicht mit Nettigkeiten spart.
       </p>
-      
       <p>
-        Unsere Atmosphäre ist eine Mischung aus:
+        Wer zum ersten Mal hereinschneit, sollte wissen: Hier trifft Tradition auf studentischen Esprit – und ab und zu wird mit einem scharfen Spruch gewürzt, der aber immer von Herzen kommt.
       </p>
-      <ul style="list-style-type: '🍺 '; padding-left: 1.5rem;">
-        <li>50% alte, durchgesoffene Couch</li>
-        <li>30% abgeranzte Barhocker mit Wackelbein</li>
-        <li>15% Küchentisch mit eingebrannten Vodka-Flecken</li>
-        <li>5% mysteriöse klebrige Flecken (wir fragen nicht nach)</li>
+      <p>
+        Unsere Spezialitäten sind ebenso ehrlich wie unser Wirt – immer frisch, immer mit Liebe gemacht und ab und zu auch kostenlos für die echten Freunde der Hausmannskost.
+      </p>
+      <ul>
+        <li>Hausgemachter Fleischkas</li>
+        <li>Rustikale Speckplatten</li>
+        <li>Der Ski: vier Schnäpse auf Ski – für die Mutigen</li>
+        <li>Und natürlich Zipfer Bier, das immer frei Haus geht</li>
       </ul>
-
       <p>
-        <strong>Unser Wirt in drei Akten:</strong><br>
-        1. "Kommts herein, Leute! Alles kein Problem!"<br>
-        2. "SCHEIßE! Wer hat schon wieder das letzte Bier genommen?!"<br>
-        3. *schläft betrunken in der Ecke* "Ihr seids die besten... echt jetzt..."
-      </p>
-
-      <p>
-        Besondere Dienstleistungen:
-      </p>
-      <ul style="list-style-type: '🤬 '; padding-left: 1.5rem;">
-        <li><strong>Kostenlose Beleidigungen</strong> ab 23 Uhr oder nach dem 5. Bier</li>
-        <li><strong>Hausgemachte Schärfe</strong>: Unsere Chili con Carne führt garantiert zu Darmbeschwerden</li>
-        <li><strong>Übernachtungsmöglichkeit</strong> (aka "du pennst hier ein und putzt morgen")</li>
-      </ul>
-
-      <p>
-        Trotz allem: Die Innstube hat Charme wie ein dreiäugiger Straßenköter - irgendwie eklig, aber man kann nicht anders als ihn lieb zu haben. Maxi würde uns zwar gerade wieder anschreien weil wir das hier schreiben, aber morgen früh steht er wieder mit Kater und selbstgemachtem Frühstück vor der Tür.
-      </p>
-
-      <p style="font-style: italic; margin-top: 2rem;">
-        P.S.: Die Polizei war nie hier. Falls doch, waren wir das nicht. Und die kaputte Toilette war schon immer so.
+        Komm vorbei, fühl dich wie zu Hause – oder wie bei einem Besuch bei der etwas schrulligen, aber herzlichsten Familie Tirols.
       </p>
     </section>
   </main>
@@ -476,31 +445,32 @@
       <div class="footer-column">
         <h3>Kontakt</h3>
         <ul>
-          <li>Musterstraße 12</li>
-          <li>6020 Innsbruck</li>
-          <li>+43 512 123456</li>
-          <li>reservierung@innstube.com</li>
+          <li>Innstube Tirol</li>
+          <li>Alte Dorfstraße 12</li>
+          <li>Tirol, Österreich</li>
+          <li>Telefon: +43 512 3456789</li>
+          <li>Email: info@innstube.tirol</li>
         </ul>
       </div>
       <div class="footer-column">
-        <h3>Wichtige Infos</h3>
+        <h3>Öffnungszeiten</h3>
         <ul>
-          <li>Hausordnung: Keine Regeln außer Maxis Laune</li>
-          <li>Küchenschlüssel: Unter der Fußmatte</li>
-          <li>Notfallnummer: Pizza-Service</li>
+          <li>Mo-Fr: 16:00 - 24:00</li>
+          <li>Sa: 18:00 - 02:00</li>
+          <li>So: Ruhetag</li>
         </ul>
       </div>
       <div class="footer-column">
-        <h3>Disclaimer</h3>
+        <h3>Social</h3>
         <ul>
-          <li>Wir übernehmen keine Haftung</li>
-          <li>Für nichts. Gar nichts.</li>
-          <li>Besucht uns auf eigene Gefahr</li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TripAdvisor</a></li>
         </ul>
       </div>
-      <div class="copyright">
-        &copy; 2025 Innstube | Alle Angaben frei erfunden | <a href="#">Impressum</a> (gibts nicht) | <a href="#">Datenschutz</a> (lol)
-      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2025 Innstube Tirol - Alle Rechte vorbehalten
     </div>
   </footer>
 </body>
